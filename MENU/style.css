@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../IMAGE/bg.jpg);
+    font-family: sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: rgb(251, 150, 10);
+    height: 60px;
+    line-height: 60px;
+    font-size: 34px;
+    float: left;
+    font-weight: bold;
+}
+
+header .logo i {
+    color: #08def2;
+    font-size: 30px;
+    font-style: oblique;
+
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: rgb(255, 251, 251);
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffffff;
+    background-color: rgb(234, 17, 17);
+}
+header nav ul li a.active {
+    background-color: #3bf208;
+    
+}
+
+.menu-toggle {
+    color: #ffffff;
+    float: right;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+h3 {
+    color: #08def2;
+    text-align: justify;
+    
+}
+
+
+.home{
+    display: flex;
+    align-items: center;
+    min height: 100vh;
+}
+/* responsive */
+
+@media (max-width: 650px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: rgb(238, 8, 8);
+        top: 50px;
+        left: -100%;
+        transition: 0.5s all;
+    }
+
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        color: rgb(255, 255, 255);
+    }
+}

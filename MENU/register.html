@@ -1,0 +1,174 @@
+
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="jquery.js"></script>
+</head>
+ <style>
+	.container{
+	position: relative;
+	margin-top: 100px;
+	width: 450px;
+	height: auto;
+	background: #dedede;
+	border-radius: 5px;
+}
+.label{
+	padding: 20px 130px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #130f40;
+}
+.login_form{
+	padding: 20px 40px;
+}
+.login_form .font{
+	font-size: 18px;
+	color: #130f40;
+	margin: 5px 0;
+}
+.login_form input{
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+	border: 1px solid silver;
+}
+.login_form .font2{
+	margin-top: 30px;
+}
+.login_form button{
+	margin: 45px 0 30px 0;
+	height: 45px;
+	width: 365px;
+	font-size: 20px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: gray;
+	border-radius: 3px;
+	border: none;
+	transition: .5s;
+}
+.login_form button:hover{
+	background: blue;
+}
+.login_form #email_error,
+.login_form #pass_error{
+	margin-top: 5px;
+	width: 345px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}
+
+.container-1 {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid rgb(0, 8, 255);
+    padding: 50px ;
+    margin: 50px;
+    text-transform: capitalize;
+
+}
+.h3{
+    text-transform:lowercase;
+}
+
+   
+
+.e-1{
+    color: red;
+}
+
+.btn{
+   background-color: green;
+  float: right;
+}
+.btn:hover{
+    background-color:blue;
+}
+h3{
+
+	text-transform: capitalize;
+	text-align: center;
+	
+}
+
+ </style>
+<body>
+    <header>
+        <div class="logo">Shoes <i>Store</i></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../MENU/produc.html" >Products</a></li>
+                <li><a href="../MENU/about us.html">About us</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="../MENU/Login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+
+    </header>
+	<h3 class="h3">Registrasi</h3>
+    <div class="container-1">
+        
+        <form name="formPendaftaran" action="daftar.php" method="post">
+            <div class="group">
+                <label>Nama</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" class="form-control">
+            </div>
+            <br>
+            <div class="group-2">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Email Aktif" class="form-control">
+                <small id="emailHelp" class="e-1">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+            </div>
+            <br>
+            <div>
+                <input type="radio" name="gneder"><label for="">male</label>
+                <input type="radio" name="gneder"><label for="">female</label>
+            </div>
+            <br>
+            <div></div>
+            <div class="group-3">
+                <label>domisili</label>
+                <select name="jurusan" class="form-control">
+                        <option value="0">Mimika</option>
+                        <option value="1">makssar</option>
+                        <option value="2">jayapura</option>
+                        <option value="3">toajaa</option>
+                    </select>
+            </div>
+            <div class="pass-1">
+                <span style="float:right;" id="status"></span>
+                <input type="password" id="pass" placeholder="Buat Kata Sandi Baru" onkeyup="passwordStrength(this.value)">
+                <a href="#" onclick="passToggle()" id="show">Lihat Password</a><br>
+                
+               </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
